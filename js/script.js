@@ -1,4 +1,3 @@
-
 // =========================== Toggle Menu Icon ==========================
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -22,11 +21,12 @@ window.onscroll = () => {
         if (top >= offSet && top < offSet + height) {
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                let activeLink = document.querySelector('header nav a[href*="' + id + '"]');
-                if (activeLink) { 
-                    activeLink.classList.add('active');
-                }
             });
+
+            let activeLink = document.querySelector('header nav a[href*="' + id + '"]');
+            if (activeLink) { 
+                activeLink.classList.add('active');
+            }
         }
     });
 
@@ -51,7 +51,7 @@ ScrollReveal().reveal('.home-image, .services-container, .portfolio .box, .conta
 ScrollReveal().reveal('.home-content h1, .about-image', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
-// ========================== Typewriter Effect (Optional) ========================
+// ========================== Typewriter Effect ========================
 const typed = new Typed('.auto-type', {
     strings: ['Web Developer', 'UI/UX Designer', 'Freelancer'],
     typeSpeed: 100,
